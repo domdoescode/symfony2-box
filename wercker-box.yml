@@ -1,5 +1,5 @@
 name: symfony2-box
-version: 0.0.3
+version: 0.0.4
 type: main
 platform: ubuntu@12.04
 description: Symfony2 box
@@ -11,7 +11,7 @@ packages:
   - php@5.5
 script: |
   sudo apt-get update
-  sudo apt-get install curl -y
+  sudo apt-get install curl -y software-properties-common
 
   # Add eports to profile, rc didn't work
   echo 'export PATH="/usr/local/bin:$PATH"' >> $HOME/.bash_profile
