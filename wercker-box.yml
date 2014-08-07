@@ -1,5 +1,5 @@
 name: symfony2-box
-version: 0.0.1
+version: 0.0.2
 type: main
 platform: ubuntu@12.04
 description: Symfony2 box
