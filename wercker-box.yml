@@ -1,5 +1,5 @@
 name: symfony2-box
-version: 0.0.6
+version: 0.0.2
 type: main
 platform: ubuntu@12.04
 description: Symfony2 box
@@ -7,12 +7,15 @@ no-response-timeout: 25
 packages:
   - curl
   - git
+  - wget
   - php@5.3
   - php@5.4
   - php@5.5
 script: |
   sudo apt-get update
-  sudo apt-get install curl -y software-properties-common python-software-properties git-core
+  sudo apt-get install curl -y software-properties-common python-software-properties git-core wget
+
+  wget https://raw.githubusercontent.com/wercker/box-php/master/patch-intl-5.3.sh
 
   # Add eports to profile, rc didn't work
   echo 'export PATH="/usr/local/bin:$PATH"' >> $HOME/.bash_profile
