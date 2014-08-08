@@ -1,9 +1,2 @@
 box: wercker/default
 no-response-timeout: 25
-
-deploy:
-  after-steps:
-    - domudall/slack-notify:
-        subdomain: connected-ventures
-        token: $SLACK_TOKEN
-        channel: test
