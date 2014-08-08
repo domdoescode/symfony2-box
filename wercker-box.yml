@@ -1,17 +1,18 @@
 name: symfony2-box
-version: 0.0.5
+version: 0.0.6
 type: main
 platform: ubuntu@12.04
 description: Symfony2 box
 no-response-timeout: 25
 packages:
   - curl
+  - git
   - php@5.3
   - php@5.4
   - php@5.5
 script: |
   sudo apt-get update
-  sudo apt-get install curl -y software-properties-common python-software-properties
+  sudo apt-get install curl -y software-properties-common python-software-properties git-core
 
   # Add eports to profile, rc didn't work
   echo 'export PATH="/usr/local/bin:$PATH"' >> $HOME/.bash_profile
