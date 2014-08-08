@@ -1,1 +1,8 @@
 box: wercker/default
+
+deploy:
+  after-steps:
+    - domudall/slack-notify:
+        subdomain: connected-ventures
+        token: $SLACK_TOKEN
+        channel: test
